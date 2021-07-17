@@ -1,0 +1,109 @@
+<html>
+<head>
+<title>Loan Status Prediction</title>
+<style>
+body
+{
+background-image:url('https://www.bajajfinservmarkets.in/discover/wp-content/uploads/2019/07/fact-file-home-loan-balance-transfer.png');
+background-repeat:no-repeat;
+background-size:cover;
+}
+h1
+{
+font-family:Comic Sans MS;
+text-decoration:underline;
+font-size:35px;
+}
+input[type="submit"]
+{
+font-size:25px;
+font-family:Comic Scans MS;
+font-weight:bold;
+border-radius:7px;
+}
+input[type="reset"]
+{
+font-size:25px;
+font-family:Comic Scans MS;
+font-weight:bold;
+border-radius:7px;
+}
+input[type="text"]
+{
+font-size:20px;
+border-radius:5px;
+}
+input[type="number"]
+{
+font-size:15px;
+border-radius:5px;
+}
+select
+{
+border-radius:5px;
+font-size:15px;
+}
+</style>
+</head>
+<body>
+<h1><center>LOAN STATUS PREDICTION</center></h1>
+<form action="{{url_for('predict')}}" method="post">
+<table align='center'>
+<tr><td><h3>Enter your current loan amount</h3></td><td><h3><div class="select"><select id="Current Loan Amount" name="Current Loan Amount">
+<option value="">select an option </option>
+<option value="2">Small Loan</option>    
+<option value="1">Medium Loan</option>
+<option value="0">Big Loan</option>
+</select></div></h3></td></tr>
+<tr><td><h3>Enter the term type</h3></td><td><h3><div class="select"><select id="Term" name=" ">
+<option value="">Select the Term</option>
+<option value="1">Long Term</option>
+<option value="0">Short Term</option>
+</select></div></h3></td></tr>
+<tr><td><h3>Enter your credit score</h3></td><td><h3><div class="select"><select id="Credit Score" name="Credit Score">
+<option value="">select an option</option>
+    <option value="0">Average</option>
+    <option value="1">Good</option>
+<option value="2">Very Good</option>
+  </select></div></h3></td></tr>
+<tr><td><h3>Enter your annual income</h3></td><td><h3><input type="text" name="annual income" required="required"></h3></td></tr>
+<tr><td><h3>Enter years of work</h3></td><td><h3><input type="text" name="years at work" required="required"></h3></td></tr>
+<tr><td><h3>Enter your home ownership type</h3></td><td><h3><div class="select"><select id="Home Ownership" name="Home Ownership">
+<option value="">select an option</option>
+     <option value="0">HaveMortgage</option>
+    <option value="2">Own Home</option>
+<option value="3">Rent</option>
+    <option value="1">Home Mortgage</option>
+  </select></div></h3></td></tr>
+<tr><td><h3>Enter your credit history</h3></td><td><h3><input type="text" name="years of credit history"></h3></td></tr>
+<tr><td><h3>Enter your number of credit issues</h3></td><td><h3><input type="text" name="number of credit issues"></h3></td></tr>
+<tr><td><h3>Enter if any bankruptcies</h3></td><td><h3><div class="select"><select id="Bankruptcies" name="Bankruptcies">
+<option value="">select your Bankruptcies</option>
+     <option value="0">Many Bankruptcies</option>    
+<option value="1">No bankruptcies</option>
+    <option value="2">Few Bankruptcies</option>
+  </select></div></h3></td></tr>
+<tr><td><h3>Enter your taxlines</h3></td><td><h3><div class="select"><select id="Tax Liens" name="Tax Liens">
+<option value="">Select your Tax Liens</option>
+     <option value="0">Many Tax Liens</option>    
+<option value="1">No Tax Lien</option>
+    <option value="2">ome Tax Liens</option>
+  </select></div></h3></td></tr>
+<tr><td><h3>Enter your credit problems</h3></td><td><h3><div class="select"><select id="Credit Problems" name="Credit Problems">
+<option value="">Select Credit Problems</option>
+     <option value="0">No Credit Problem</option>    
+<option value="1">No Tax Lien</option>
+    <option value="2">Some Credit promblem</option>
+  </select></div></h3></td></tr>
+<tr><td><h3>Enter your credit age</h3></td><td><h3><div class="select"><select id="Credit Age" name="Credit Age">
+<option value="">Select Credit Age</option>
+     <option value="0">Exceptional Credit Age</option>    
+<option value="1">Good Credit Age</option>
+    <option value="2">Short Credit Age</option>
+  </select></div></h3></td></tr>
+<tr><td><button type="submit"  name="Predict">predict</button></td>
+<td><button type="reset" name="cancel">cancel</button></td></tr>
+</table>
+</form>
+</boby>
+</html>
